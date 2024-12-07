@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>properties details</title>
+    <style>
+      .img_details {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .img_details img {
+        height: 450px;
+        object-fit: contain;
+        border-radius: 20px;
+      }
+      .all_features{
+        width: 25%;
+      }
+      @media (max-width: 600px) {
+        .details_section {
+          flex-direction: column;
+          gap: 20px;
+          padding: 10px;
+        }
+
+        .img_details {
+          width: 100%;
+        }
+
+        .img_details img {
+          width: 100%;
+          height: auto;
+        }
+        .text_details {
+          width: 95%;
+        }
+        .text_details .para{
+          font-size: 2rem;
+        }
+        .text_details .all_features {
+          width: 100%;
+          
+        }
+
+        .details_agency_section .header_agency_details {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .select_category_details {
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .details_agency_section .body_agency_details {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .details_housse {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          text-align: center;
+        }
+
+        .image_details_house {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+
+        .text_content_agency_details {
+          padding: 10px;
+        }
+        .all_features{
+            width: 90%;
+        }
+        footer {
+          text-align: center;
+          padding: 10px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <div class="email_adress">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>hichamcodes71@gmail.com</h5>
+        </div>
+        <div class="adress">
+          <i class="fa-solid fa-map"></i>
+          <h5>morroco,taounate,zrizer</h5>
+        </div>
+        <div class="socialMedia">
+          <a href="https://web.facebook.com/people/Hicham-Drakech/pfbid0RCAiQ81f31gCf4uyQKvZGE6Wosuz9vCRM193UzUxqvigWQ3dJVrcWcLirJ3ZBt6Vl/?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.instagram.com/hicham.div/?igsh=MXgycGFkanlrZmplYw%3D%3D#"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://x.com/hicham_dra49613?s=09"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/hicham-drakech-5bb305291/"> <i class="fa-brands fa-linkedin"></i></a>
+         </div>
+      </header>
+      <div class="navbare">
+        <img
+          src="images/Gold Black Modern Real Estate Logo.png"
+          alt=""
+          style="height: 100px"
+        />
+        <ul class="the_navbare">
+          <li><a href="http://127.0.0.1:5500/index.html#">home</a></li>
+          <li>
+            <a href="http://127.0.0.1:5500/properties.html">properties</a>
+          </li>
+          <li>
+            <a
+              href="http://127.0.0.1:5500/propeties_details.html"
+              class="active"
+              >property details</a
+            >
+          </li>
+          <li><a href="http://127.0.0.1:5500/contact.html">contact</a></li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="open_nav"></i>
+      </div>
+    </nav>
+    <div class="back">
+      <p>Home / Properties details</p>
+      <h1>Single Property</h1>
+    </div>
+    <section class="details_section">
+      <div class="img_details" style="">
+        <img src="images/deal-03.jpg" alt="" />
+        <div class="text_details" style="width: 100%">
+          <h2>Apparment</h2>
+          <p class="para">24 New Street Miami, OR 24560</p>
+          <h6>
+            Discover the epitome of modern living in this beautifully designed
+            apartment. The spacious layout boasts an open-concept living and
+            dining area,
+            <span style="color: #4c1f7a"
+              >perfect for entertaining guests or enjoying a quiet evening at
+              home. The kitchen is a chef’s dream,</span
+            >
+            featuring state-of-the-art appliances, sleek cabinetry, and ample
+            counter space for all your culinary adventures.
+          </h6>
+          <h6>
+            he master bedroom is a tranquil retreat,
+            <span style="color: #219b9d"
+              >complete with a large closet and an en-suite bathroom that exudes
+              luxury with its contemporary fixtures and finishes</span
+            >. Additional bedrooms offer versatility, ideal for a home office,
+            guest room, or children's room.
+          </h6>
+          <h6>
+            Natural light floods the apartment through large windows, creating a
+            warm and inviting atmosphere.
+            <span style="color: #ff8000"
+              >Step out onto the private balcony to enjoy your morning coffee or
+              relax after a long day,</span
+            >
+            taking in the stunning views of the cityscape.
+          </h6>
+          <h6>
+            Residents of this building enjoy access to top-notch amenities,
+            including a fitness center,
+            <span style="color: #219b9d"
+              >a rooftop terrace, and a community lounge. With its prime
+              location,</span
+            >
+            close to shopping, dining, and public transportation, this apartment
+            offers both convenience and style.
+          </h6>
+          <div class="all_details">
+            <div class="only_details">
+              <h1>best useful links?</h1>
+              <p style="color: black">
+                Get <span style="font-weight: 900">the best villa</span> website
+                template in HTML CSS and Bootstrap for your business. TemplateMo
+                provides you the
+                <span style="color: #4c1f7a">best free CSS templates</span>
+                in the world. Please tell your friends about it.
+              </p>
+            </div>
+            <div class="only_details">
+              <h1>how does this work ?</h1>
+              <p style="color: black">
+                <span style="color: #219b9d">At Villa Agency</span>, we are
+                dedicated to simplifying your luxury living experience.
+                <span style="color: #4c1f7a"
+                  >Our seamless process allows you to easily create an
+                  account</span
+                >, browse our exclusive collection of stunning villas, and
+                securely manage your villa acquisition. Our dedicated team is
+                always at your service to provide assistance and ensure your
+                experience
+                <span style="color: #ff8000"
+                  >is smooth, enjoyable, and tailored just for you.</span
+                >
+              </p>
+            </div>
+            <div class="only_details">
+              <h1>why is villa agency the best</h1>
+              <p style="color: black">
+                <span style="color: #219b9d">We at Villa Agency</span> take
+                great satisfaction in providing exclusive lists of opulent
+                villas, making sure that every property satisfies the highest
+                requirements for elegance and quality. Our committed staff
+                offers individualized service, customizing our support to fit
+                your particular requirements and preferences.
+                <span style="color: #4c1f7a">
+                  From perusing our thoughtfully chosen properties to completing
+                  your purchase, we want to provide a smooth experience that
+                  makes the process enjoyable and hassle-free.</span
+                >
+                Our clients receive insightful counsel from our seasoned agents
+                who have extensive market knowledge.
+                <span style="color: #ff8000"
+                  >Our first goal is customer pleasure, and our outstanding
+                  support staff is always available to quickly address any
+                  queries and issues. Choosing Villa Agency is a decision that
+                  embodies excellence and luxury due to our reliable reputation,
+                  steady delivery of high-end homes, and first-rate
+                  service.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="all_features">
+        <div class="only_features">
+          <img src="images/info-icon-01.png" alt="" />
+          <div class="details_features">
+            <h1>250 m2</h1>
+            <p>Total Flat Space</p>
+          </div>
+        </div>
+        <div class="only_features">
+          <img src="images/info-icon-02.png" alt="" />
+          <div class="details_features">
+            <h1>Contract</h1>
+            <p>Contract Ready</p>
+          </div>
+        </div>
+        <div class="only_features">
+          <img src="images/info-icon-03.png" alt="" />
+          <div class="details_features">
+            <h1>Payment</h1>
+            <p>Payment Process</p>
+          </div>
+        </div>
+        <div class="only_features">
+          <img src="images/info-icon-04.png" alt="" />
+          <div class="details_features">
+            <h1>Safety</h1>
+            <p>24/7 Under Control</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details_agency_section">
+      <div class="header_agency_details">
+        <div class="text_content_agency">
+          <h1>| Best Deal</h1>
+          <p>Find Your Best Deal Right Now!</p>
+        </div>
+        <div class="select_category_details">
+          <button class="btn_category new_category_btn">appartment</button>
+          <button class="btn_category">villa house</button>
+          <button class="btn_category">penthouse</button>
+        </div>
+      </div>
+      <div class="body_agency_details">
+        <div class="details_housse">
+          <div class="only_details_housse">
+            <h6>Total Flat Space</h6>
+            <h2 class="space">185 m2</h2>
+          </div>
+          <div class="only_details_housse">
+            <h6>Floor number</h6>
+            <h2 class="floor">26th</h2>
+          </div>
+          <div class="only_details_housse">
+            <h6>Number of rooms</h6>
+            <h2 class="rooms">4</h2>
+          </div>
+          <div class="only_details_housse">
+            <h6>Parking Available</h6>
+            <h2 class="parking">Yes</h2>
+          </div>
+          <div class="only_details_housse">
+            <h6>Payment Process</h6>
+            <h2 class="payment">Bank</h2>
+          </div>
+        </div>
+        <img
+          src="images/deal-01.jpg"
+          alt="images/deal-01.jpg"
+          class="image_details_house"
+        />
+        <div class="text_content_agency_details">
+          <h2>Extra Info About Property</h2>
+          <p class="introduction_text">
+            An apartment is a self-contained unit in a multi-story building,
+            ideal for urban living. Types range from studios and lofts to
+            penthouses and serviced units, catering to diverse needs. Apartments
+            offer affordability, low maintenance, shared amenities, and
+            convenience, often located near workplaces and services.
+          </p>
+          <p class="body_text">
+            However, they may have limited space, privacy, and restrictions on
+            renovations or pets. Modern trends include smart apartments,
+            eco-friendly designs, and co-living spaces. Suitable for young
+            professionals, families, or retirees, apartments balance
+            cost-effectiveness and access to urban amenities, making them
+            popular for both living and investment.
+          </p>
+          <button class="inscription">
+            <i class="fa-solid fa-calendar-days"></i>schedule a visit
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer style="background-color: #219b9d">
+      <p>
+        Copyright © 30/11/2024 villa agency creat by hicham drakech All rights
+        reserved. Design: TemplateMo
+      </p>
+    </footer>
+  </body>
+  <script>
+    let only_details = document.querySelectorAll(".only_details");
+
+    const active_para = () => {
+      only_details.forEach((item) => {
+        item.addEventListener("click", () => {
+          only_details.forEach((el) => {
+            el.classList.remove("new_teatle");
+            el.querySelectorAll("p").forEach((p) => {
+              p.style.display = "none";
+            });
+          });
+          item.classList.add("new_teatle");
+          let acti = item.querySelector("p");
+          if (acti) {
+            acti.style.display = "block";
+          }
+        });
+      });
+    };
+
+    active_para();
+
+    let open_nav = document.getElementById("open_nav");
+    let the_navbare = document.querySelector(".the_navbare");
+    open_nav.onclick = () => {
+      the_navbare.classList.toggle("naw_navbare");
+      open_nav.classList.toggle("fa-xmark");
+      open_nav.classList.toggle("fa-bars");
+    };
+
+    let btn_category = document.querySelectorAll(".btn_category");
+    let image_details_house = document.querySelector(".image_details_house");
+    let payment = document.querySelector(".payment");
+    let parking = document.querySelector(".parking");
+    let rooms = document.querySelector(".rooms");
+    let floor = document.querySelector(".floor");
+    let space = document.querySelector(".space");
+    let introduction_text = document.querySelector(".introduction_text");
+    let body_text = document.querySelector(".body_text");
+    const select_category = () => {
+      btn_category.forEach((item) => {
+        item.onclick = () => {
+          btn_category.forEach((item) => {
+            btn_category.forEach((item) =>
+              item.classList.remove("new_category_btn")
+            );
+            item.classList.add("new_category_btn");
+          });
+          item.classList.add("new_category_btn");
+          console.log(item.textContent);
+          if (item.textContent == "appartment") {
+            image_details_house.src = "images/deal-01.jpg";
+            space.textContent = "185 m2";
+            floor.textContent = "26th";
+            rooms.textContent = "4";
+            parking.textContent = "yes";
+            payment.textContent = "Bank";
+            introduction_text.textContent = ` An apartment is a self-contained unit in a multi-story building, ideal for urban living. Types range from studios and lofts to penthouses and serviced units, catering to diverse needs. Apartments offer affordability, low maintenance, shared amenities, and convenience, often located near workplaces and services.`;
+            body_text.textContent = `However, they may have limited space, privacy, and restrictions on renovations or pets. Modern trends include smart apartments, eco-friendly designs, and co-living spaces. Suitable for young professionals, families, or retirees, apartments balance cost-effectiveness and access to urban amenities, making them popular for both living and investment.`;
+          }
+          if (item.textContent == "villa house") {
+            image_details_house.src = "images/deal-03.jpg";
+            space.textContent = "250 m2";
+            floor.textContent = "26th";
+            rooms.textContent = "5";
+            parking.textContent = "yes";
+            payment.textContent = "Bank";
+            introduction_text.textContent = `A villa is a detached, spacious home offering luxury, privacy, and outdoor areas like gardens or pools. Originating in ancient Rome, villas have evolved into modern, eco-friendly designs or traditional styles.`;
+            body_text.textContent = `They come in types like luxury, beach, farm, or gated community villas. Villas provide natural light, freedom to customize, and prestige but require higher costs and maintenance. Ideal for families, professionals, or investors, they suit those seeking space, independence, and long-term value. Popular for vacation rentals or second homes, villas are often located in suburban, coastal, or scenic areas.`;
+          }
+          if (item.textContent == "penthouse") {
+            image_details_house.src = "images/deal-02.jpg";
+            space.textContent = "320 m2";
+            floor.textContent = "34th";
+            rooms.textContent = "6";
+            parking.textContent = "yes";
+            payment.textContent = "Bank";
+            introduction_text.textContent = `A penthouse is a luxury apartment on the top floor of a building, offering exclusivity, panoramic views, and high-end amenities like private terraces, pools, and smart home systems. Known for spacious layouts, privacy, and status, penthouses are ideal for affluent individuals or families.`;
+            body_text.textContent = ` They often include premium finishes, dedicated elevators, and abundant natural light. While highly prestigious and a great investment, they come with high costs and maintenance. Popular in metropolitan and coastal cities, penthouses reflect modern trends like eco-friendly designs, smart technology, and personalized interiors.`;
+          }
+        };
+      });
+    };
+    select_category();
+  </script>
+</html>

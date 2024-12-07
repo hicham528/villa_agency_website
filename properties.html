@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>properties</title>
+</head>
+<body>
+    <nav>
+        <header>
+          <div class="email_adress">
+            <i class="fa-solid fa-envelope"></i>
+            <h5>hichamcodes71@gmail.com</h5>
+          </div>
+          <div class="adress">
+            <i class="fa-solid fa-map"></i>
+            <h5>morroco,taounate,zrizer</h5>
+          </div>
+          <div class="socialMedia">
+            <a href="https://web.facebook.com/people/Hicham-Drakech/pfbid0RCAiQ81f31gCf4uyQKvZGE6Wosuz9vCRM193UzUxqvigWQ3dJVrcWcLirJ3ZBt6Vl/?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+             <a href="https://www.instagram.com/hicham.div/?igsh=MXgycGFkanlrZmplYw%3D%3D#"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://x.com/hicham_dra49613?s=09"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/hicham-drakech-5bb305291/"> <i class="fa-brands fa-linkedin"></i></a>
+           </div>
+        </header>
+        <div class="navbare">
+          <img
+            src="images/Gold Black Modern Real Estate Logo.png"
+            alt=""
+            style="height: 100px"
+          />
+          <ul class="the_navbare">
+            <li><a href="http://127.0.0.1:5500/index.html#" >home</a></li>
+            <li><a href="http://127.0.0.1:5500/properties.html" class="active">properties</a></li>
+            <li><a href="http://127.0.0.1:5500/propeties_details.html">property details</a></li>
+            <li><a href="http://127.0.0.1:5500/contact.html">contact</a></li>
+           
+          </ul>
+          
+          <i class="fa-solid fa-bars" id="open_nav"></i>
+        </div>
+      </nav>
+      <div class="back">
+        <p>Home / Properties</p>
+        <h1>Properties</h1>
+      </div>
+      <div class="select_category_details" style="margin-top: 50px; display: flex; justify-content: center; align-items: center; width: 100%; gap: 20px;">
+        <button class="btn_category new_category_btn">Show All</button>
+        <button class="btn_category">Apartment</button>
+        <button class="btn_category">Luxury Villa</button>
+        <button class="btn_category">Penthouse</button>
+        <button class="btn_category">Modern Condo</button>
+      </div>
+      
+      <div class="project_container" style="margin-top: 50px;">
+        <div class="only_project">
+            <img src="images/property-01.jpg" alt="images/property-01.jpg" />
+            <div class="header_text_project">
+              <h2>Luxury Villa</h2>
+              <h3>$2.264.000</h3>
+            </div>
+            <h1 style="font-size: 20px; color: black">
+              18 New Street Miami, OR 97219
+            </h1>
+            <div class="details_project">
+              <p>Bedrooms:<span>8</span></p>
+              <p>Bathrooms:<span>8</span></p>
+              <p>Area:<span>545m2</span></p>
+              <p>Floor: <span>3</span></p>
+              <p>Parking:<span>6 spots</span></p>
+            </div>
+            <button>schedule a visit</button>
+          </div>
+      </div>
+      <footer style="background-color: #219b9d;">
+        <p>
+          Copyright © 30/11/2024 villa agency creat by hicham drakech All rights
+          reserved. Design: TemplateMo
+        </p>
+      </footer>
+</body>
+<script>
+let open_nav = document.getElementById("open_nav");
+let the_navbare = document.querySelector(".the_navbare");
+open_nav.onclick = () => {
+  the_navbare.classList.toggle("naw_navbare");
+  open_nav.classList.toggle("fa-xmark");
+  open_nav.classList.toggle("fa-bars");
+};
+
+
+let newArray = [];
+let project_container = document.querySelector(".project_container");
+
+// Fetch data from JSON
+fetch("fetch.json")
+  .then(response => response.json())
+  .then(data => {
+    newArray = data.projects;
+    createAllProducts(); // Call the function to display products
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    project_container.innerHTML = "<p>Failed to load data. Please try again later.</p>";
+  });
+
+// Function to create and display all products
+const createAllProducts = () => {
+  if (newArray.length > 0) {
+    project_container.innerHTML = ""; // Clear previous content
+
+    newArray.forEach(item => {
+      if (
+        item.image &&
+        item.headerText &&
+        item.headerText.title &&
+        item.headerText.price &&
+        item.address &&
+        item.details
+      ) {
+        let parentDiv = document.createElement("div");
+        parentDiv.classList.add("only_project");
+
+        // Add content to the div
+        parentDiv.innerHTML = `
+          <img src="${item.image}" alt="Property Image" />
+          <div class="header_text_project">
+            <h2 class="title">${item.headerText.title}</h2>
+            <h3>${item.headerText.price}</h3>
+          </div>
+          <h1 style="font-size: 20px; color: black">${item.address.text}</h1>
+          <div class="details_project">
+            <p>Bedrooms: <span>${item.details.bedrooms}</span></p>
+            <p>Bathrooms: <span>${item.details.bathrooms}</span></p>
+            <p>Area: <span>${item.details.area}</span></p>
+            <p>Floor: <span>${item.details.floor}</span></p>
+            <p>Parking: <span>${item.details.parking}</span></p>
+          </div>
+          <button>Schedule a Visit</button>
+        `;
+
+        project_container.appendChild(parentDiv);
+      } else {
+        console.warn("Incomplete data for item:", item);
+      }
+    });
+
+    // Handle category button clicks
+    let btn_category = document.querySelectorAll(".btn_category");
+    btn_category.forEach(btn => {
+      btn.onclick = () => {
+        // Remove the 'new_category_btn' class from all buttons
+        btn_category.forEach(item => {
+          item.classList.remove("new_category_btn");
+        });
+
+        // Add the class to the clicked button
+        btn.classList.add("new_category_btn");
+
+        // If "Show All" is clicked, display all projects
+        if (btn.textContent.trim().toLowerCase() === "show all") {
+          project_container.querySelectorAll('.only_project').forEach(child => {
+            child.style.display = "flex"; // Show all products
+          });
+        } else {
+          // Filter based on category (button text)
+          project_container.querySelectorAll('.only_project').forEach(child => {
+            const title = child.querySelector(".title").textContent.toLowerCase();
+            if (title.includes(btn.textContent.trim().toLowerCase())) {
+              child.style.display = "flex"; // Show matching category
+            } else {
+              child.style.display = "none"; // Hide non-matching categories
+            }
+          });
+        }
+      };
+    });
+  } else {
+    project_container.innerHTML = "<p>No products available.</p>";
+  }
+};
+
+// Call the function to initially display all products
+createAllProducts();
+
+</script>
+</html>
